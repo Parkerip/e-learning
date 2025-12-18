@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Angular
+dist/
+.angular/
+.env
+
+# Environment
+backend/.env
+frontend/e-learning/.env
+
+# OS & Editor
+.vscode/
+.DS_Store
+Thumbs.db
