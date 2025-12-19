@@ -34,7 +34,6 @@ app.use('/api/videos', require('./routes/video.route'));
 app.use('/api/test', require('./routes/test.route'));
 
 // ✅ contact route (ONLY if file exists as contact.route.js)
-app.use('/api/contact', require('./routes/contact.route'));
 
 /* ---------- HEALTH CHECK ---------- */
 app.get('/', (req, res) => {
