@@ -1,6 +1,7 @@
 const Question = require('../models/question.model');
 const Result = require('../models/result.model');
-const TestAttempt = require('../models/testAttempt.model'); // ✅ ADD THIS
+const TestAttempt = require('../models/testattempt.model');
+const TestAttempt = require('../models/testattempt.model.js');
 
 
 
