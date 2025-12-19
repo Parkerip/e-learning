@@ -1,12 +1,14 @@
-// src/models/course.model.js
 const mongoose = require('mongoose');
 
 const courseSchema = new mongoose.Schema({
-  name: {
+  title: {
     type: String,
-    required: true,
-    enum: ['JEE', 'NEET']
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
   }
-});
+}, { timestamps: true });
 
 module.exports = mongoose.model('Course', courseSchema);

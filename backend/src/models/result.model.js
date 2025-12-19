@@ -1,11 +1,21 @@
 const mongoose = require('mongoose');
 
 const resultSchema = new mongoose.Schema({
-  userId: mongoose.Schema.Types.ObjectId,
-  courseId: mongoose.Schema.Types.ObjectId,
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  courseId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Course',
+    required: true
+  },
   score: Number,
-  total: Number,
-  createdAt: { type: Date, default: Date.now }
-});
+  total: Number
+}, { timestamps: true });
+
+// 🔒 PREVENT DUPLICATE ATTEMPTS
+resultSchema.index({ userId: 1, courseId: 1 }, { unique: true });
 
 module.exports = mongoose.model('Result', resultSchema);
